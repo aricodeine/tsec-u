@@ -42,7 +42,18 @@ const rendercalendar = () => {
 }
 
 
-
+	
+var upcoming = document.querySelector('.upcoming');
+var upcomingCal = document.querySelector('.calendar');
+upcoming.addEventListener('click', () => {
+    if(upcomingCal.style.display == "block") {
+        
+        upcomingCal.style.display = "none";
+        console.log('changed');
+    }else {
+        upcomingCal.style.display = "block";
+    }
+});
 
 document.querySelector('.prev').
     addEventListener('click', () => {
