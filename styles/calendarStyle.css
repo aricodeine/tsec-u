@@ -6,6 +6,7 @@
     /* top: 9vh; */
 }
 
+
 .container {
     width: 100%;
     height: 100vh;
@@ -14,7 +15,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
     
+}
+
+nav:not(.container div) {
+    filter: blur(1px);
 }
 
 .calendar {
@@ -23,6 +29,8 @@
     font-size: 62.5%;
     background-color: #222227;
     box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+    display: none;
+    
 }
 
 .month {
@@ -109,4 +117,21 @@
 
 .clas {
     height: 20px !important;
+}
+
+.event {
+    position: relative;
+}
+
+.event::after {
+    content: '•';
+    color: #f78536;
+    font-size: 1.2em;
+    position: absolute;
+    left: 1px;
+    top: -7px;
+}
+
+.upcoming {
+    cursor: pointer;
 }
