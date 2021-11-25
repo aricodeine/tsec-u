@@ -12,6 +12,7 @@ const rendercalendar = () => {
     
 
     const monthDays = document.querySelector('.days');
+    
 
     const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     const previousLastDay = new Date(date.getFullYear(), date.getMonth(), 0);
@@ -39,18 +40,22 @@ const rendercalendar = () => {
         days += `<div class="next-date">${j}</div>`;
         monthDays.innerHTML = days;
     }
+
+    
+    
 }
 
 
-	
 var upcoming = document.querySelector('.upcoming');
 var upcomingCal = document.querySelector('.calendar');
+var manageBlur = document.querySelector('nav:not(.container div)');
+
 upcoming.addEventListener('click', () => {
-    if(upcomingCal.style.display == "block") {
-        
+    if(upcomingCal.style.display === "block") {
+        manageBlur.style.filter = 'blur(0px)';     
         upcomingCal.style.display = "none";
-        console.log('changed');
     }else {
+        manageBlur.style.filter = 'blur(1.2px)';
         upcomingCal.style.display = "block";
     }
 });
