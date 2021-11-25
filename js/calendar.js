@@ -32,7 +32,7 @@ const rendercalendar = () => {
 
     for (let i = 1; i <= lastDay.getDate(); i++) {
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) days += `<div class="today">${i}</div>`;
-        else if(i === 23) days += `<div class="clas event">${i}</div>`;
+//         else if(i === 23) days += `<div class="clas event">${i}</div>`;
         else days += `<div class="clas">${i}</div>`;
         monthDays.innerHTML = days;
     }
