@@ -32,6 +32,7 @@ const rendercalendar = () => {
 
     for (let i = 1; i <= lastDay.getDate(); i++) {
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) days += `<div class="today">${i}</div>`;
+        else if(i === 23) days += `<div class="clas event">${i}</div>`;
         else days += `<div class="clas">${i}</div>`;
         monthDays.innerHTML = days;
     }
@@ -54,6 +55,7 @@ upcoming.addEventListener('click', () => {
     if(upcomingCal.style.display === "block") {
         manageBlur.style.filter = 'blur(0px)';     
         upcomingCal.style.display = "none";
+        // console.log('changed');
     }else {
         manageBlur.style.filter = 'blur(1.2px)';
         upcomingCal.style.display = "block";
