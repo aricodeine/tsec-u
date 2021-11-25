@@ -19,10 +19,6 @@
     
 }
 
-nav:not(.container div) {
-    filter: blur(1px);
-}
-
 .calendar {
     width: 45rem;
     height: 31.2rem;
