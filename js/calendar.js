@@ -47,7 +47,7 @@ const rendercalendar = () => {
 }
 
 
-var upcoming = document.querySelector('.upcoming');
+var upcoming = document.querySelector('.upcoming a');
 var upcomingCal = document.querySelector('.calendar');
 var manageBlur = document.querySelector('nav:not(.container div)');
 
