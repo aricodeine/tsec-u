@@ -107,10 +107,16 @@ nav{
       } */
 }
 
+.cal-hide{
+    display: none;
+}
+
 .nav-active{
   transform: translateX(0%);
 
 }
+
+
 @keyframes navLinkFade{
   from{
       opacity: 0;
