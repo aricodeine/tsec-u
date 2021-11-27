@@ -10,6 +10,7 @@ body {
     overflow: hidden;
 }
 
+
 .container {
     width: 100%;
     height: 100vh;
@@ -29,7 +30,9 @@ body {
     font-size: 62.5%;
     background-color: #222227;
     box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
-    display: none;
+    /* display: none; */
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
     
 }
 
@@ -119,7 +122,7 @@ body {
     height: 20px !important;
 }
 
-/* .event {
+.event {
     position: relative;
 }
 
@@ -130,8 +133,44 @@ body {
     position: absolute;
     left: 1px;
     top: -7px;
-} */
+}
 
 .upcoming {
     cursor: pointer;
+}
+
+.eventSection {
+    display: inline;
+    height: 374.396px;
+    width: 400px;
+    background-color: #222227;
+    border-top-left-radius: 7%;
+    border-bottom-left-radius: 7%;
+
+}
+
+/* .eventSection {
+    display: none;
+} */
+
+.eventSection h1 {
+    margin: 20px;
+    font-size: 2.4rem;
+}
+
+.placeholder {
+    margin: 25px;
+    font-size: 1.3rem;
+}
+
+.trans {
+    transition: all 0.2s ease-out;
+}
+
+.hidden {
+    display: none;
+}
+  
+.visuallyhidden {
+    opacity: 0;
 }
