@@ -6,6 +6,9 @@
     /* top: 9vh; */
 }
 
+body {
+    overflow: hidden;
+}
 
 .container {
     width: 100%;
@@ -16,6 +19,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    color: whitesmoke;
     
 }
 
