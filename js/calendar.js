@@ -52,31 +52,22 @@ var upcomingCal = document.querySelector('.calendar');
 var manageBlur = document.querySelector('nav:not(.container div)');
 var eventSection = document.querySelector('.eventSection');
 
-// upcoming.addEventListener('click', () => {
-//     if (upcomingCal.style.display === 'block') {
-//         manageBlur.style.filter = 'blur(0px)';
-//         eventSection.style.display = 'none';
-//         upcomingCal.style.display = 'none';
-//         // console.log('changed');
-//     } else {
-//         manageBlur.style.filter = 'blur(1.2px)';
-//         eventSection.style.display = 'block';
-//         upcomingCal.style.display = 'block';
-//     }
-// });
-
 upcoming.addEventListener('click', function () {
   
     if (upcomingCal.classList.contains('hidden')) {
+      
       upcomingCal.classList.remove('hidden');
       eventSection.classList.remove('hidden');
       setTimeout(function () {
         upcomingCal.classList.remove('visuallyhidden');
         eventSection.classList.remove('visuallyhidden');
+        document.querySelector('body > *:not(.container)').style.filter = 'blur(1px)';
       }, 20);
     } else {
+      
       upcomingCal.classList.add('visuallyhidden');
-      eventSection.classList.add('visuallyhidden');   
+      eventSection.classList.add('visuallyhidden');
+      document.querySelector('body > *:not(.container)').style.filter = 'blur(0px)';   
       upcomingCal.addEventListener('transitionend', function(e) {
         upcomingCal.classList.add('hidden');
       }, {
