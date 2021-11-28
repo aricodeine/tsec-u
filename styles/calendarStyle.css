@@ -8,13 +8,17 @@
 
 body {
     overflow: hidden;
+    background-color: #12121f;
+}
+
+body:not(.container div) {
+    filter: blur(0px);
 }
 
 
 .container {
     width: 100%;
     height: 100vh;
-    background-color: #12121f;
     color: #eee;
     display: flex;
     justify-content: center;
@@ -31,7 +35,9 @@ body {
     background-color: #222227;
     box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
     /* display: none; */
-    border-top-right-radius: 7%;
+    position: absolute;
+    right: 172px;
+    border-top-right-radius: 1.7rem;
     border-bottom-right-radius: 7%;
     
 }
@@ -46,6 +52,7 @@ body {
     padding: 0 2rem;
     text-align: center;
     text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
+    border-top-right-radius: 1.7rem;
 }
 .month i {
     font-size: 2.5rem;
@@ -141,6 +148,8 @@ body {
 
 .eventSection {
     display: inline;
+    position: absolute;
+    left: 168px;
     height: 374.396px;
     width: 400px;
     background-color: #222227;
