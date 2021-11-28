@@ -23,7 +23,7 @@ nav{
     letter-spacing: 3px;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
     color: #dff7f6 ;
 }
@@ -38,7 +38,7 @@ nav{
 
 }
 
-.nav-links a{
+.nav-links a {
   padding: 5px;
   text-decoration: none;
   color: #dff7f6 ;
@@ -52,6 +52,14 @@ nav{
   border-radius: 5px;
 
 }
+
+/* .upcoming:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+
+} */
+
 .burger{
   display: none;
 }
@@ -107,16 +115,10 @@ nav{
       } */
 }
 
-.cal-hide{
-    display: none;
-}
-
 .nav-active{
   transform: translateX(0%);
 
 }
-
-
 @keyframes navLinkFade{
   from{
       opacity: 0;
