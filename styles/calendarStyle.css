@@ -185,12 +185,33 @@ body:not(.container div) {
     opacity: 0;
 }
 
+/* #bb {
+    position: absolute;
+    /* filter: blur(1px); */
+    /* top: 40%;   
+    left: 45%;
+    color: whitesmoke;
+}  */ 
+
 #eventname, #eventtime, #eventdescription {
     word-wrap: break-word;
     margin: 10px;
-    /* padding-left: 2px;
-    padding-right: 2px; */
+    text-align: justify;
 }
+
+#eventname > strong {
+text-decoration: underline;
+}
+
+#eventtime > strong {
+    text-decoration: underline;
+}
+
+#eventdescription > strong {
+    text-decoration: underline;
+}
+
+
 
 #frontpagetext {
     width: 60%;
