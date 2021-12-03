@@ -19,6 +19,7 @@ body:not(.container div) {
 .container {
     width: 100%;
     height: 100vh;
+    /* position: fixed; */
     color: #eee;
     display: flex;
     justify-content: center;
@@ -125,15 +126,15 @@ body:not(.container div) {
     cursor: pointer;
 }
 
-.clas {
+.clas, event1 {
     height: 20px !important;
 }
 
-.event {
+.dot {
     position: relative;
 }
 
-.event::after {
+.dot::after {
     content: '•';
     color: #f78536;
     font-size: 1.2em;
@@ -182,4 +183,20 @@ body:not(.container div) {
   
 .visuallyhidden {
     opacity: 0;
+}
+
+#eventname, #eventtime, #eventdescription {
+    word-wrap: break-word;
+    margin: 10px;
+    /* padding-left: 2px;
+    padding-right: 2px; */
+}
+
+#frontpagetext {
+    width: 60%;
+    display: flex;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    color: whitesmoke;
 }
