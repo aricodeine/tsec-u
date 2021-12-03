@@ -11,7 +11,7 @@ const navSlide =() =>{
 
     //links
     navLinks.forEach((link,index) => {
-        console.log(index/7);
+//         console.log(index/7);
         link.style.animation = 'navLinkFade 0.5s ease forwards ${index / 5 + 0.3}s';
 
 
