@@ -199,4 +199,5 @@ body:not(.container div) {
     left: 20%;
     top: 30%;
     color: whitesmoke;
+    text-align: justify;
 }
