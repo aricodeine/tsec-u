@@ -32,10 +32,10 @@ const rendercalendar = () => {
 
     for (let i = 1; i <= lastDay.getDate(); i++) {
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-          if(i == 3) days += `<div class="today event1 dot" onclick="isEvent(this)">${i}</div>`;
+          if(i == 4) days += `<div class="today event1 dot" onclick="isEvent(this)">${i}</div>`;
           else days += `<div class="clas today" onclick="isEvent(this)">${i}</div>`;
         }
-        else if (i == 3 && date.getMonth() == 11) {
+        else if (i == 4 && date.getMonth() == 11) {
           days += `<div class="clas event1 dot" onclick="isEvent(this)">${i}</div>`;
         }
         else days += `<div class="clas" onclick="isEvent(this)">${i}</div>`;
@@ -113,7 +113,7 @@ document.querySelector('.next').
 function isEvent(el) {
   var some = document.getElementById('eventdata');
   if(el.classList.contains('event1')) {
-    some.innerHTML = '<p id="eventname"><strong>Event name: </strong> Jeeto Hackathon</p> <p id="eventtime"><strong>Event time: 1300 hrs</strong></p> <p id="eventdescription"><strong>Description: </strong>Students of Thadomal Shahani college have come together to create an all-purpose website to unite all the clubs and committees, for achieving the core objectives of the student\'s community representing various committees.</p>';
+    some.innerHTML = '<p id="eventname"><strong>Event name:</strong> 👨🏻‍💻 Rubix Hackathon\'22 👨🏻‍💻</p> <p id="eventtime"><strong>Event duration:</strong> 18th January 2022 - 20th January 2022</p> <p id="eventdescription"><strong>Description:</strong> This year Rubix is going to organize a  48 Hour Online Hackathon🏃‍♀👨🏻‍💻 side events and webinars!👨🏻‍💻🧾<br>Further details regarding the hackathon to be out soon!!🤩</p>';
   }else {
     some.innerHTML = "No event scheduled";
   }
