@@ -1,0 +1,47 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Quicksand", sans-serif;
+    /* color: whitesmoke;   */
+}
+
+body {
+    background-color: #12121f; 
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+    grid-gap: 0rem;  
+}
+
+.about-box{
+    margin-top: 70px;
+    font-style: bold;
+    width: 300px;
+    height: 290px;
+    background-color: #7868E6;
+    border-radius: 10px;
+    margin-left: 140px;
+    /* margin-right: 100px; */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px black;
+    transition: all 0.7s;
+    /* transition: all 0.7s; */
+}
+
+.about-box:hover {
+    box-shadow: 0px 10px 40px #EAEAEA;
+    background-color: #EAEAEA;
+}
+
+.name{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.rollno{
+    text-align: center;
+}
