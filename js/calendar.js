@@ -16,7 +16,7 @@ const rendercalendar = () => {
 
     const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     const previousLastDay = new Date(date.getFullYear(), date.getMonth(), 0);
-    console.log(lastDay);
+    // console.log(lastDay);
 
     date.setDate(1);
     const firstDayIndex = date.getDay();
@@ -31,9 +31,14 @@ const rendercalendar = () => {
     }
 
     for (let i = 1; i <= lastDay.getDate(); i++) {
-        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) days += `<div class="today">${i}</div>`;
-        else if (i === 23) days += `<div class="clas event">${i}</div>`;
-        else days += `<div class="clas">${i}</div>`;
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+          if(i == 3) days += `<div class="today event1 dot" onclick="isEvent(this)">${i}</div>`;
+          else days += `<div class="clas today" onclick="isEvent(this)">${i}</div>`;
+        }
+        else if (i == 3 && date.getMonth() == 11) {
+          days += `<div class="clas event1 dot" onclick="isEvent(this)">${i}</div>`;
+        }
+        else days += `<div class="clas" onclick="isEvent(this)">${i}</div>`;
         monthDays.innerHTML = days;
     }
 
@@ -42,12 +47,7 @@ const rendercalendar = () => {
         monthDays.innerHTML = days;
     }
 
-
-
-}
-
-
-var upcoming = document.querySelector('.upcoming');
+    var upcoming = document.querySelector('.upcoming');
 var upcomingCal = document.querySelector('.calendar');
 var manageBlur = document.querySelector('nav:not(.container div)');
 var eventSection = document.querySelector('.eventSection');
@@ -87,6 +87,16 @@ upcoming.addEventListener('click', function () {
     
   }, false);
 
+
+
+
+// const selet = document.getElementById('event1')[0];
+// selet.addEventListener('click', () => {
+//   document.getElementById('eventdata').innerHTML = "Thampi is alive";
+// });
+
+}
+
 document.querySelector('.prev').
     addEventListener('click', () => {
         date.setMonth(date.getMonth() - 1);
@@ -99,4 +109,17 @@ document.querySelector('.next').
         rendercalendar();
     });
 
+
+function isEvent(el) {
+  var some = document.getElementById('eventdata');
+  if(el.classList.contains('event1')) {
+    some.innerHTML = '<p id="eventname"><strong>Event name: </strong> Jeeto Hackathon</p> <p id="eventtime"><strong>Event time: 1300 hrs</strong></p> <p id="eventdescription"><strong>Description: </strong>Students of Thadomal Shahani college have come together to create an all-purpose website to unite all the clubs and committees, for achieving the core objectives of the student\'s community representing various committees.</p>';
+  }else {
+    some.innerHTML = "No event scheduled";
+  }
+}
+
+
+
 rendercalendar();
+
