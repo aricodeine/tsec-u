@@ -1,11 +1,11 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Quicksand", sans-serif;  
 }
 
 body {
-    background-color: #12121f;
+    background-color: #12121f; 
 }
 
 .title{
@@ -23,8 +23,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
    
-    grid-gap: 0rem;
-  
+    grid-gap: 0rem;  
 }
 .box{
     margin-top: 70px;
@@ -60,14 +59,15 @@ body {
     color: whitesmoke;
 }
 .image img{
-    width: 48%;
+    width: 76%;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 75px;
-    height: 40%;
+    height: 54%;
 }
 .name{
     text-align: center;
+    font-size: 1.2rem;
 }
 .description{
     text-align: center;
@@ -78,13 +78,20 @@ body {
     margin-right: 2px;
     padding-left: 2px;
     padding-right: 2px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .image-tie img{
-    height: 130px;
-    width: 90px;
+    height: 150px;
+    width: 220px;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 100px;
 
+}
+
+.iete-img img {
+    width: 72%;
+    height: 48%;
 }
