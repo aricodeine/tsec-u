@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/Style.css">
     <link rel="stylesheet" href="styles/clubsandcommitteesCSS.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
@@ -12,13 +13,43 @@
 </head>
 
 <body>
+    <nav>
+    <div class="logo">
+      <a href="index.html">
+        <h4>TSEC-U</h4>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <!-- <li>
+        <a href="#">Clubs</a>
+      </li> -->
+      <li>
+        <a href="clubsandcommittees.html">Clubs & Committees</a>
+      </li>
+      <!-- <li class="upcoming">
+        <a href="#">Upcoming Events</a>
+      </li> -->
+      <li>
+        <a href="about.html">About Us</a>
+      </li>
+      <!-- <li>
+        <a href="#">Contact Us</a>
+      </li> -->
+    </ul>
+    <div class="burger">
+      <div class="line 1"></div>
+      <div class="line 2"></div>
+      <div class="line 3"></div>
+    </div>
+  </nav>
+
     <div class="title">
         <h1>Tsec-Committees</h1>
     </div>
 
 
     <section class="container">
-        <div class="box" onclick="location.href='https://tseccodestorm.com/';">
+        <div class="box" onclick="window.open('https://tseccodestorm.com/', '_blank')">
             <div class="image">
                 <img src="images/codestorm.png">
             </div>
@@ -34,7 +65,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.tseccodecell.com/';">
+        <div class="box" onclick="window.open('https://tseccodecell.com/', '_blank')">
             <div class="image">
                 <img src="images/codecell.png">
             </div>
@@ -52,7 +83,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.instagram.com/tsec.ecell/?hl=en';">
+        <div class="box" onclick="window.open('https://www.instagram.com/tsec.ecell/?hl=en', '_blank')">
             <div class="image">
                 <img src="images/ecell-tsec.png">
             </div>
@@ -68,7 +99,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.csitsec.in/';">
+        <div class="box" onclick="window.open('https://www.csitsec.in/', '_blank')">
             <div class="image">
                 <img src="images/csi.png">
             </div>
@@ -84,7 +115,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.instagram.com/nss_tsec/?hl=en';">
+        <div class="box" onclick="window.open('https://www.instagram.com/nss_tsec/?hl=en', '_blank')">
             <div class="image">
                 <img src="images/NSS.png">
             </div>
@@ -101,8 +132,8 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.ietetsec.com/';">
-            <div class="image">
+        <div class="box" onclick="window.open('https://www.ietetsec.com/', '_blank')">
+            <div class="image iete-img">
                 <img src="images/iete-tsec.png">
             </div>
             <div class="name">
@@ -116,7 +147,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.instagram.com/iiche.tsec/?hl=en';">
+        <div class="box" onclick="window.open('https://www.instagram.com/iiche.tsec/?hl=en', '_blank')">
             <div class="image">
                 <img src="images/iiche-tsec.png">
             </div>
@@ -132,7 +163,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.instagram.com/iste_tsec/?hl=en';">
+        <div class="box" onclick="window.open('https://www.instagram.com/iste_tsec/?hl=en', '_blank')">
             <div class="image">
                 <img src="images/iste.png">
             </div>
@@ -153,7 +184,7 @@
     </div>
 
     <section class="container">
-        <div class="box" onclick="location.href='https://rctsec.in/';">
+        <div class="box" onclick="window.open('https://rctsec.in/', '_blank')">
             <div class="image">
                 <img src="images/rct-tseccc.png">
             </div>
@@ -168,7 +199,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.instagram.com/tieclubtsec/?hl=en';">
+        <div class="box" onclick="window.open('https://www.instagram.com/tieclubtsec/?hl=en', '_blank')">
             <div class="image-tie">
                 <img src="images/tie.png">
             </div>
@@ -183,7 +214,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.instagram.com/gdsctsec/';">
+        <div class="box" onclick="window.open('https://www.instagram.com/gdsctsec/', '_blank')">
             <div class="image">
                 <img src="images/gdsc-removebg-preview.png">
             </div>
@@ -199,7 +230,7 @@
         </div>
 
 
-        <div class="box" onclick="location.href='https://www.instagram.com/madclubtsec/?igshid=1hjoo33f4kyah';">
+        <div class="box" onclick="window.open('https://www.instagram.com/madclubtsec/?igshid=1hjoo33f4kyah', '_blank')">
             <div class="image">
                 <img src="images/mad-tsec-removebg-preview.png">
             </div>
@@ -214,7 +245,7 @@
             </div>
         </div>
     </section>
-
+    <script src="js/nav.js"></script>
 </body>
 
 </html>
