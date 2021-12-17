@@ -82,7 +82,7 @@ nav{
 }
 }
 
-@media only screen and (max-width: 768px){
+/* @media only screen and (max-width: 768px){
       body{
         overflow-x: hidden;
       }
@@ -108,12 +108,7 @@ nav{
         transition: transform 0.5s ease-in;
 
       }
-      /* .nav-links li{
-
-        opacity: 0;
-
-      } */
-}
+} */
 
 .nav-active{
   transform: translateX(0%);
@@ -129,4 +124,17 @@ nav{
       transform: translateX(0px);
 
   }
+}
+
+.tsecpic {
+    position: absolute;
+    display: block;
+    padding-top: 50px;
+    transition: transform .2s;
+    top: 4px;
+    left: 30px;
+    width: 100px;
+}
+.tsecpic:hover {
+  transform: scale(1.2);
 }
