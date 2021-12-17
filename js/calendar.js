@@ -31,12 +31,18 @@ const rendercalendar = () => {
     }
 
     for (let i = 1; i <= lastDay.getDate(); i++) {
-        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-          if(i == 4) days += `<div class="today event1 dot" onclick="isEvent(this)">${i}</div>`;
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() == new Date().getFullYear()) {
+          if(i == 18) days += `<div class="today event1 dot" onclick="isEvent(this)">${i}</div>`;
+          else if(i == 22) days += `<div class="today event2 dot" onclick="isEvent(this)">${i}</div>`;
+          else if(i == 12) days += `<div class="today event3 dot" onclick="isEvent(this)">${i}</div>`;
           else days += `<div class="clas today" onclick="isEvent(this)">${i}</div>`;
         }
-        else if (i == 4 && date.getMonth() == 11) {
+        else if (i == 18 && date.getMonth() == 11 && date.getFullYear() == 2021) {
           days += `<div class="clas event1 dot" onclick="isEvent(this)">${i}</div>`;
+        }else if (i == 22 && date.getMonth() == 11 && date.getFullYear() == 2021) {
+          days += `<div class="clas event2 dot" onclick="isEvent(this)">${i}</div>`;
+        }else if (i == 12 && date.getMonth() == 0 && date.getFullYear() == 2022) {
+          days += `<div class="clas event3 dot" onclick="isEvent(this)">${i}</div>`;
         }
         else days += `<div class="clas" onclick="isEvent(this)">${i}</div>`;
         monthDays.innerHTML = days;
@@ -113,13 +119,17 @@ document.querySelector('.next').
 function isEvent(el) {
   var some = document.getElementById('eventdata');
   if(el.classList.contains('event1')) {
-    some.innerHTML = '<p id="eventname"><strong>Event name:</strong> 👨🏻‍💻 Rubix Hackathon\'22 👨🏻‍💻</p> <p id="eventtime"><strong>Event duration:</strong> 18th January 2022 - 20th January 2022</p> <p id="eventdescription"><strong>Description:</strong> This year Rubix is going to organize a  48 Hour Online Hackathon🏃‍♀👨🏻‍💻 side events and webinars!👨🏻‍💻🧾<br>Further details regarding the hackathon to be out soon!!🤩</p>';
+    some.innerHTML = '<p id="eventname"><strong>Event name:</strong> 👨🏻‍💻 Rubix Hackathon\'22 👨🏻‍💻</p> <p id="eventtime"><strong>Event duration:</strong> 18th January 2022 - 20th January 2022</p> <p id="eventdescription"><strong>Description:</strong> This year Rubix is going to organize a  48 Hour Online Hackathon🏃‍♀👨🏻‍💻 side events and webinars!👨🏻‍💻🧾<br><br>Further details regarding the hackathon to be out soon!!🤩</p>';
+  }else if(el.classList.contains('event2')) {
+    some.innerHTML = '<p id="eventname"><strong>Event name:</strong> BidWiser CP contest\'22</p> <p id="eventtime"><strong>Event duration:</strong> 22nd December 2021</p> <p id="eventdescription"><strong>Description:</strong> This is a competitive programming contest organized specially in response to the requests of students.</p>';
+  }else if(el.classList.contains('event3')) {
+    some.innerHTML = '<p id="eventname"><strong>Event name:</strong> TSEC GDSC Machine Learning Bootcamp</p> <p id="eventtime"><strong>Event duration:</strong> 12th January 2022 - 16th January 2022</p> <p id="eventdescription"><strong>Description:</strong> Get a taste of learning Machine Learning with GDSC.</p>';
   }else {
     some.innerHTML = "No event scheduled";
   }
 }
 
-
+console.log(date.getFullYear());
 
 rendercalendar();
 
